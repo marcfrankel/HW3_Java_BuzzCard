@@ -32,7 +32,8 @@ public class Student {
         int cost = item.getMealSwipes();
         int currentSwipes = card.getMealSwipes();
         if (currentSwipes < cost) {
-            System.out.print("You do not have the amount to buy this item :(");
+            System.out.println("You do not have the amount"
+                + " to buy this item :(");
         } else {
             card.setMealSwipes(currentSwipes - cost);
         }
@@ -42,7 +43,8 @@ public class Student {
         double cost = item.getBuzzFunds();
         double currentFunds = card.getBuzzFunds();
         if (currentFunds < cost) {
-            System.out.print("You do not have the amount to buy this item :(");
+            System.out.println("You do not have the amount"
+                + " to buy this item :(");
         } else {
             card.setBuzzFunds(currentFunds - cost);
         }
@@ -52,7 +54,8 @@ public class Student {
         double cost = item.getBuzzFunds();
         double currentFunds = card.getBuzzFunds();
         if (currentFunds < cost) {
-            System.out.print("You do not have the amount to buy this item :(");
+            System.out.println("You do not have the amount"
+                + " to buy this item :(");
         } else {
             card.setBuzzFunds(currentFunds - cost);
         }
@@ -62,7 +65,8 @@ public class Student {
         double cost = item.getDiningDollars();
         double currentDiningDollars = card.getDiningDollars();
         if (currentDiningDollars < cost) {
-            System.out.print("You do not have the amount to buy this item :(");
+            System.out.println("You do not have the amount"
+                + " to buy this item :(");
         } else {
             card.setDiningDollars(currentDiningDollars - cost);
         }
@@ -72,14 +76,15 @@ public class Student {
         double cost = item.getBuzzFunds();
         double currentFunds = card.getBuzzFunds();
         if (currentFunds < cost) {
-            System.out.print("You do not have the amount to buy this item :(");
+            System.out.println("You do not have the amount"
+                + " to buy this item :(");
         } else {
             card.setBuzzFunds(currentFunds - cost);
         }
     }
 
     public String toString() {
-        return String.format("Student named %s" +
-            " with ID: %s. %s", name, id, card.toString());
+        return String.format("Student named %s"
+        + " with ID: %s %s", name, id, card.toString());
     }
 }
