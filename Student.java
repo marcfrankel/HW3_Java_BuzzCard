@@ -39,8 +39,8 @@ public class Student {
     }
 
     public void buyBrittainBuzzFunds(BrittainItem item) {
-        int cost = item.getBuzzFunds();
-        int currentFunds = card.getBuzzFunds();
+        double cost = item.getBuzzFunds();
+        double currentFunds = card.getBuzzFunds();
         if (currentFunds < cost) {
             System.out.print("You do not have the amount to buy this item :(");
         } else {
@@ -49,8 +49,8 @@ public class Student {
     }
 
     public void buyBurdellsBuzzFunds(BurdellsItem item) {
-        int cost = item.getBuzzFunds();
-        int currentFunds = card.getBuzzFunds();
+        double cost = item.getBuzzFunds();
+        double currentFunds = card.getBuzzFunds();
         if (currentFunds < cost) {
             System.out.print("You do not have the amount to buy this item :(");
         } else {
@@ -59,18 +59,18 @@ public class Student {
     }
 
     public void buySubwayDiningDollars(SubwayItem item) {
-        int cost = item.getDiningDollars();
-        int currentDinningDollars = card.getDiningDollars();
-        if (currentDinningDollars < cost) {
+        double cost = item.getDiningDollars();
+        double currentDiningDollars = card.getDiningDollars();
+        if (currentDiningDollars < cost) {
             System.out.print("You do not have the amount to buy this item :(");
         } else {
-            card.setDinningDollars(currentDinningDollars - cost);
+            card.setDiningDollars(currentDiningDollars - cost);
         }
     }
 
     public void buySubwayBuzzFunds(SubwayItem item) {
-        int cost = item.getBuzzFunds();
-        int currentFunds = card.getBuzzFunds();
+        double cost = item.getBuzzFunds();
+        double currentFunds = card.getBuzzFunds();
         if (currentFunds < cost) {
             System.out.print("You do not have the amount to buy this item :(");
         } else {
