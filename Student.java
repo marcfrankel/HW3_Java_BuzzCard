@@ -1,0 +1,85 @@
+/**
+ * A Student java class for HW3 CS1331
+ * @author mfrankel8
+ * @version 1.0
+**/
+
+public class Student {
+    private BuzzCard card;
+    private String name;
+    private int id;
+
+
+    public Student(BuzzCard card, String name, int id) {
+        this.card = card;
+        this.name = name;
+        this.id = id;
+    }
+
+    public BuzzCard getBuzzCard() {
+        return card;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void buyBrittainMealSwipes(BrittainItem item) {
+        int cost = item.getMealSwipes();
+        int currentSwipes = card.getMealSwipes();
+        if (currentSwipes < cost) {
+            System.out.print("You do not have the amount to buy this item :(");
+        } else {
+            card.setMealSwipes(currentSwipes - cost);
+        }
+    }
+
+    public void buyBrittainBuzzFunds(BrittainItem item) {
+        int cost = item.getBuzzFunds();
+        int currentFunds = card.getBuzzFunds();
+        if (currentFunds < cost) {
+            System.out.print("You do not have the amount to buy this item :(");
+        } else {
+            card.setBuzzFunds(currentFunds - cost);
+        }
+    }
+
+    public void buyBurdellsBuzzFunds(BurdellsItem item) {
+        int cost = item.getBuzzFunds();
+        int currentFunds = card.getBuzzFunds();
+        if (currentFunds < cost) {
+            System.out.print("You do not have the amount to buy this item :(");
+        } else {
+            card.setBuzzFunds(currentFunds - cost);
+        }
+    }
+
+    public void buySubwayDiningDollars(SubwayItem item) {
+        int cost = item.getDiningDollars();
+        int currentDinningDollars = card.getDiningDollars();
+        if (currentDinningDollars < cost) {
+            System.out.print("You do not have the amount to buy this item :(");
+        } else {
+            card.setDinningDollars(currentDinningDollars - cost);
+        }
+    }
+
+    public void buySubwayBuzzFunds(SubwayItem item) {
+        int cost = item.getBuzzFunds();
+        int currentFunds = card.getBuzzFunds();
+        if (currentFunds < cost) {
+            System.out.print("You do not have the amount to buy this item :(");
+        } else {
+            card.setBuzzFunds(currentFunds - cost);
+        }
+    }
+
+    public String toString() {
+        return String.format("Student named %s" +
+            " with ID: %s. %s", name, id, card.toString());
+    }
+}
